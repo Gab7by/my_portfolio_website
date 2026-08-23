@@ -1,0 +1,38 @@
+export const education = [
+  {
+    id: "edu-bsc-cs",
+    type: "Degree",
+    title: "B.Sc. Computer Science",
+    institution: "University of Ghana",
+    startDate: "2020-09",
+    endDate: "2024-06",
+    description: "Focused on software engineering, databases, and human-computer interaction.",
+  },
+  {
+    id: "edu-cert-pbi",
+    type: "Certification",
+    title: "Microsoft Power BI Data Analyst Associate (PL-300)",
+    institution: "Microsoft",
+    startDate: "2023-08",
+    endDate: "2023-08",
+    description: null,
+  },
+  {
+    id: "edu-cert-react",
+    type: "Certification",
+    title: "Meta Front-End Developer Professional Certificate",
+    institution: "Coursera / Meta",
+    startDate: "2023-01",
+    endDate: "2023-05",
+    description: null,
+  },
+  {
+    id: "edu-cert-gd",
+    type: "Certification",
+    title: "Graphic Design Specialization",
+    institution: "California Institute of the Arts (Coursera)",
+    startDate: "2021-06",
+    endDate: "2021-11",
+    description: null,
+  },
+];
