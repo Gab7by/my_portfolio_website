@@ -1,4 +1,3 @@
-import { personalInfo } from "../../data/personalInfo";
 import { SECTION_IDS } from "../../lib/constants";
 import { SectionWrapper } from "../../components/ui/SectionWrapper";
 import { SectionHeading } from "../../components/ui/SectionHeading";
@@ -13,16 +12,12 @@ export function Contact() {
       <SectionHeading
         eyebrow="Contact"
         title="Let's work together"
-        description="Have a project in mind or just want to say hi? Reach out below."
+        description="Have a project in mind or want to talk AI, healthcare, or data? Send a message, call, or chat on WhatsApp."
       />
 
       <div className="grid grid-cols-1 gap-8 md:grid-cols-[0.9fr_1.1fr]">
         <FadeInWhenVisible>
-          <ContactInfoList
-            email={personalInfo.email}
-            phone={personalInfo.phone}
-            location={personalInfo.location}
-          />
+          <ContactInfoList />
         </FadeInWhenVisible>
 
         <FadeInWhenVisible delay={0.1}>

@@ -26,7 +26,15 @@ export const personalInfo = {
   },
   location: "Kumasi, Ghana",
   email: "owusugabriel803@gmail.com",
-  phone: "+233 247 821 705",
+  phone: "+233 24 782 1705",
+  phoneHref: "tel:+233247821705",
+  whatsapp: "+233 24 506 9530",
+  whatsappUrl: `https://wa.me/233245069530?text=${encodeURIComponent(
+    "Hi Gabriel, I found you through your portfolio and would like to get in touch."
+  )}`,
+  // Formspree form endpoint. This is public by design (not a secret) — delivery to
+  // the inbox and server-side spam filtering are configured in the Formspree dashboard.
+  contactFormEndpoint: "https://formspree.io/f/mwlvlqdj",
   availability: "Open to freelance projects & full-time roles",
   profileImage: "/Gabriel_profile_pic.jpeg",
   resumeUrl: "/resume.pdf",

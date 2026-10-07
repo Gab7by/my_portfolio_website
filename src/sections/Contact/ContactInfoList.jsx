@@ -1,14 +1,23 @@
+import { personalInfo } from "../../data/personalInfo";
 import { getIcon } from "../../lib/iconMap";
 import { socials } from "../../data/socials";
 import { SocialIconLink } from "../../components/ui/SocialIconLink";
 
-export function ContactInfoList({ email, phone, location }) {
-  const items = [
-    { icon: "Mail", label: "Email", value: email, href: `mailto:${email}` },
-    { icon: "Phone", label: "Phone", value: phone, href: `tel:${phone.replace(/\s+/g, "")}` },
-    { icon: "MapPin", label: "Location", value: location, href: null },
-  ];
+const items = [
+  { icon: "Mail", label: "Email", value: personalInfo.email, href: `mailto:${personalInfo.email}` },
+  { icon: "Phone", label: "Call", value: personalInfo.phone, href: personalInfo.phoneHref },
+  {
+    icon: "Whatsapp",
+    label: "WhatsApp",
+    value: personalInfo.whatsapp,
+    href: personalInfo.whatsappUrl,
+    external: true,
+    srHint: " (opens WhatsApp)",
+  },
+  { icon: "MapPin", label: "Location", value: personalInfo.location, href: null },
+];
 
+export function ContactInfoList() {
   return (
     <div className="flex flex-col gap-8">
       <ul className="flex flex-col gap-5">
@@ -21,7 +30,10 @@ export function ContactInfoList({ email, phone, location }) {
               </span>
               <div>
                 <p className="text-xs uppercase tracking-wide text-muted-foreground">{item.label}</p>
-                <p className="font-medium">{item.value}</p>
+                <p className="font-medium">
+                  {item.value}
+                  {item.srHint && <span className="sr-only">{item.srHint}</span>}
+                </p>
               </div>
             </>
           );
@@ -31,6 +43,7 @@ export function ContactInfoList({ email, phone, location }) {
               {item.href ? (
                 <a
                   href={item.href}
+                  {...(item.external && { target: "_blank", rel: "noopener noreferrer" })}
                   className="flex items-center gap-4 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring"
                 >
                   {content}
