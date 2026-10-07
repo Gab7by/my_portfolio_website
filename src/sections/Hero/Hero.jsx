@@ -3,6 +3,7 @@ import { FolderGit2, Send } from "lucide-react";
 import { personalInfo } from "../../data/personalInfo";
 import { SECTION_IDS } from "../../lib/constants";
 import { scrollToSection } from "../../lib/scrollTo";
+import { getIcon } from "../../lib/iconMap";
 import { Button } from "../../components/ui/Button";
 import { Avatar } from "../../components/ui/Avatar";
 import { TypingText } from "./TypingText";
@@ -39,6 +40,21 @@ export function Hero() {
           <p className="font-heading text-xl font-medium text-accent sm:text-2xl" aria-live="off">
             <TypingText words={personalInfo.roleTitles} />
           </p>
+
+          <ul className="flex flex-wrap gap-2" aria-label="Who I am">
+            {personalInfo.identities.map(({ label, icon }) => {
+              const Icon = getIcon(icon);
+              return (
+                <li
+                  key={label}
+                  className="inline-flex items-center gap-2 rounded-full border border-accent/30 bg-accent/10 px-3 py-1.5 text-xs font-medium text-accent sm:text-sm"
+                >
+                  <Icon size={16} aria-hidden="true" />
+                  {label}
+                </li>
+              );
+            })}
+          </ul>
 
           <p className="max-w-xl text-base text-muted-foreground sm:text-lg">
             {personalInfo.bio.short}
