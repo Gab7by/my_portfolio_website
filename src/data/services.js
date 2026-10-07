@@ -1,50 +1,80 @@
 export const services = [
   {
-    id: "graphic-design",
-    title: "Graphic Design",
+    id: "ai-solutions",
+    title: "AI Solutions & Automation",
     description:
-      "Eye-catching visual identities, social media graphics, and marketing collateral crafted in Photoshop.",
-    icon: "Palette",
-    highlights: ["Brand identity", "Social media kits", "Flyers & banners", "Photo manipulation"],
+      "Practical AI tools built around the way you already work, from custom assistants to automated workflows and AI features added to your existing systems.",
+    icon: "Bot",
+    highlights: [
+      "Custom AI assistants & chatbots",
+      "Workflow & process automation",
+      "AI integration into existing tools",
+      "AI-assisted development with Claude Code & Codex",
+    ],
+  },
+  {
+    id: "ai-healthcare",
+    title: "AI & Healthcare Solutions",
+    description:
+      "Technology for healthcare, shaped by hands-on laboratory experience. I help find where AI and data can genuinely improve care, then build tools that fit real clinical and lab workflows.",
+    icon: "HeartPulse",
+    highlights: [
+      "Healthcare & lab data solutions",
+      "AI-assisted laboratory workflows",
+      "Health tech prototypes & pilots",
+      "Responsible, patient-centred design",
+    ],
+  },
+  {
+    id: "web-software-development",
+    title: "Web & Software Development",
+    description:
+      "Responsive websites and full-stack web applications, with React front ends and Python/Django back ends.",
+    icon: "Code2",
+    highlights: [
+      "Business websites",
+      "Custom web applications",
+      "REST APIs with Django REST Framework",
+      "MySQL database design & integration",
+    ],
   },
   {
     id: "data-analytics",
-    title: "Data Analytics & Dashboard Development",
+    title: "Data Analytics & Dashboards",
     description:
-      "Turning raw spreadsheets and databases into clean, interactive dashboards that drive decisions.",
+      "Turning raw spreadsheets and databases into clear insights and interactive dashboards that support better decisions.",
     icon: "BarChart3",
-    highlights: ["Power BI dashboards", "Data cleaning", "SQL reporting", "KPI tracking"],
+    highlights: [
+      "Data cleaning & preparation",
+      "Excel & SQL analysis",
+      "Power BI dashboards",
+      "Automated, data-driven reporting",
+    ],
   },
   {
-    id: "web-development",
-    title: "Web Development",
+    id: "research-statistics",
+    title: "Research & Statistical Analysis",
     description:
-      "Fast, responsive, and accessible websites built with modern tools and best practices.",
-    icon: "Code2",
-    highlights: ["Responsive layouts", "Performance tuning", "SEO-friendly markup", "Cross-browser support"],
+      "Reliable analysis support for students, researchers and health institutions, from organising study data to running and interpreting the statistics.",
+    icon: "FlaskConical",
+    highlights: [
+      "SPSS & statistical analysis",
+      "Research data management",
+      "Results interpretation",
+      "Publication-ready charts & tables",
+    ],
   },
   {
-    id: "frontend-development",
-    title: "Frontend Development",
+    id: "technology-consulting",
+    title: "Technology & AI Consulting",
     description:
-      "Polished, interactive user interfaces built with React, Tailwind CSS, and modern JavaScript.",
-    icon: "Atom",
-    highlights: ["React components", "Animation & motion", "State management", "Design-to-code"],
-  },
-  {
-    id: "backend-development",
-    title: "Backend Development",
-    description:
-      "Robust server-side applications and REST APIs powered by Python and Django.",
-    icon: "Server",
-    highlights: ["REST APIs", "Database modeling", "Authentication", "Deployment"],
-  },
-  {
-    id: "business-intelligence",
-    title: "Business Intelligence Solutions",
-    description:
-      "End-to-end BI solutions that connect data sources to clear, actionable reporting.",
-    icon: "LineChart",
-    highlights: ["ETL pipelines", "Automated reporting", "Data visualization", "Stakeholder dashboards"],
+      "Helping individuals, small businesses and organisations decide where technology and AI fit, then putting it into practice step by step.",
+    icon: "Lightbulb",
+    highlights: [
+      "AI adoption & implementation",
+      "Business process improvement",
+      "Digital transformation support",
+      "Tool selection & team training",
+    ],
   },
 ];

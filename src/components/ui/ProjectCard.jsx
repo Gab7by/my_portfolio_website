@@ -1,61 +1,62 @@
 import { ExternalLink } from "lucide-react";
-import { FaGithub } from "react-icons/fa6";
 import { Card } from "./Card";
 import { Badge } from "./Badge";
+import { Button } from "./Button";
+import { ProjectGallery } from "./ProjectGallery";
 
-export function ProjectCard({ project }) {
-  const { title, description, tags, image, liveUrl, githubUrl, category } = project;
+export function ProjectCard({ project, reverse = false }) {
+  const { title, type, role, contribution, features, tags, images, mobileImage, liveUrl } = project;
 
   return (
-    <Card hoverable className="group flex h-full flex-col overflow-hidden">
-      <div className="relative aspect-video w-full overflow-hidden bg-muted">
-        <img
-          src={image}
-          alt={`Preview of ${title}`}
-          loading="lazy"
-          width={800}
-          height={450}
-          className="h-full w-full object-cover transition-transform duration-500 ease-out group-hover:scale-105"
-        />
-        <span className="absolute left-3 top-3 rounded-full bg-primary/90 px-3 py-1 text-xs font-medium text-on-primary backdrop-blur">
-          {category}
-        </span>
+    <Card className="grid grid-cols-1 items-center gap-10 p-6 sm:p-8 lg:grid-cols-[1.15fr_1fr] lg:gap-12">
+      <div className={reverse ? "lg:order-2" : undefined}>
+        <ProjectGallery images={images} mobileImage={mobileImage} url={liveUrl} />
       </div>
 
-      <div className="flex flex-1 flex-col gap-4 p-6">
-        <h3 className="font-heading text-lg font-semibold">{title}</h3>
-        <p className="flex-1 text-sm text-muted-foreground">{description}</p>
+      <div className="flex flex-col gap-5">
+        <div className="flex flex-col gap-3">
+          <span className="font-heading text-sm font-semibold uppercase tracking-widest text-accent">{type}</span>
+          <h3 className="font-heading text-2xl font-bold tracking-tight sm:text-3xl">{title}</h3>
+          <span className="self-start rounded-full border border-accent/30 bg-accent/10 px-3 py-1 text-xs font-medium text-accent">
+            {role}
+          </span>
+        </div>
 
-        <div className="flex flex-wrap gap-2">
+        <p className="text-base text-muted-foreground">{contribution}</p>
+
+        <div className="flex flex-col gap-2">
+          <span className="text-sm font-medium">Key features</span>
+          <ul className="flex flex-col gap-1.5 text-sm text-muted-foreground">
+            {features.map((feature) => (
+              <li key={feature} className="flex items-start gap-2">
+                <span className="mt-2 h-1 w-1 shrink-0 rounded-full bg-accent" aria-hidden="true" />
+                {feature}
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <ul className="flex flex-wrap gap-2" aria-label="Technologies used">
           {tags.map((tag) => (
-            <Badge key={tag}>{tag}</Badge>
+            <li key={tag}>
+              <Badge>{tag}</Badge>
+            </li>
           ))}
-        </div>
+        </ul>
 
-        <div className="flex items-center gap-4 pt-2">
-          {liveUrl && (
-            <a
-              href={liveUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 text-sm font-medium text-accent hover:underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring"
-            >
-              <ExternalLink size={16} aria-hidden="true" />
-              Live Demo
-            </a>
-          )}
-          {githubUrl && (
-            <a
-              href={githubUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 text-sm font-medium text-foreground hover:underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring"
-            >
-              <FaGithub size={16} aria-hidden="true" />
-              Code
-            </a>
-          )}
-        </div>
+        {liveUrl && (
+          <Button
+            as="a"
+            href={liveUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            icon={ExternalLink}
+            className="self-start"
+          >
+            Visit Site
+            <span className="sr-only"> (opens in a new tab)</span>
+          </Button>
+        )}
       </div>
     </Card>
   );

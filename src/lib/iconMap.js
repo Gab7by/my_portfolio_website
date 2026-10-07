@@ -46,6 +46,8 @@ import {
   Monitor,
   FileText,
   Search,
+  Bot,
+  Lightbulb,
 } from "lucide-react";
 import { FaDribbble, FaGithub, FaInstagram, FaLinkedin, FaXTwitter } from "react-icons/fa6";
 
@@ -99,6 +101,8 @@ export const iconMap = {
   Monitor,
   FileText,
   Search,
+  Bot,
+  Lightbulb,
   Github: FaGithub,
   Linkedin: FaLinkedin,
   Twitter: FaXTwitter,

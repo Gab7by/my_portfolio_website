@@ -1,88 +1,67 @@
-export const projectCategories = ["All", "Design", "Data", "Development"];
-
 export const projects = [
   {
-    id: "brand-identity-nova",
-    title: "Nova Skincare Brand Identity",
-    description:
-      "Complete visual identity for a skincare startup — logo, color system, packaging mockups, and social templates.",
-    longDescription:
-      "Designed a full brand identity system including logo suite, color palette, packaging mockups, and a library of social media templates to keep the brand consistent across channels.",
-    category: "Design",
-    tags: ["Photoshop", "Branding", "Social Media"],
-    image: "https://picsum.photos/seed/nova-brand/800/600",
-    liveUrl: null,
-    githubUrl: null,
-    featured: true,
+    id: "miss-betty-import",
+    title: "Miss Betty Import",
+    type: "E-commerce Platform",
+    role: "Sole Full-Stack Developer",
+    contribution:
+      "I designed and built the entire platform, from the customer storefront to a full admin back office. It includes a React front end, a Supabase database with authentication, Hubtel payments, automated email and SMS notifications, and an AI shopping assistant that answers customer questions and recommends products.",
+    features: [
+      "\"Ask Betty\" AI shopping assistant with product recommendations",
+      "Pre-order and in-stock catalogue with timed order periods",
+      "Cart and checkout with Hubtel payments",
+      "Customer accounts, Google sign-in, order tracking and referrals",
+      "Admin dashboard for orders, invoices, analytics, coupons and shipping",
+      "Bulk SMS and email campaigns",
+    ],
+    tags: ["React", "Vite", "Supabase", "PostgreSQL", "Generative AI", "Hubtel", "Resend", "Vercel"],
+    images: [
+      { src: "/projects/miss-betty-import/home.webp", alt: "Miss Betty Import storefront with product grid and category filters" },
+      { src: "/projects/miss-betty-import/assistant.webp", alt: "Ask Betty AI shopping assistant chat panel open on the storefront" },
+      { src: "/projects/miss-betty-import/product.webp", alt: "Product detail view with image carousel, pricing and colour options" },
+      { src: "/projects/miss-betty-import/login.webp", alt: "Sign-in page with Google and email login" },
+    ],
+    mobileImage: { src: "/projects/miss-betty-import/mobile.webp", alt: "Miss Betty Import storefront on a phone" },
+    liveUrl: "https://www.missbettyimport.com",
+    published: true,
   },
   {
-    id: "urban-eats-social-kit",
-    title: "Urban Eats Social Media Kit",
-    description:
-      "A cohesive set of Instagram post, story, and banner templates for a restaurant chain's launch campaign.",
-    longDescription:
-      "Created a scalable set of social templates covering posts, stories, and promotional banners, designed for quick reuse by the client's in-house marketing team.",
-    category: "Design",
-    tags: ["Photoshop", "Social Media", "Marketing"],
-    image: "https://picsum.photos/seed/urban-eats/800/600",
-    liveUrl: null,
-    githubUrl: null,
-    featured: false,
+    id: "vsec-college",
+    title: "VSEC College of Studies",
+    type: "Institutional Website",
+    role: "Sole Full-Stack Developer",
+    contribution:
+      "I designed and developed the college's multi-page website end to end. It presents seven programme areas and 32 courses, includes an interactive English proficiency test, and takes student applications online. It's built to load fast and give prospective students a strong first impression on any device.",
+    features: [
+      "Programme and course catalogue across seven academies",
+      "Interactive 40-question CEFR English level test with course recommendations",
+      "Online enrolment for domestic and international applicants",
+      "Animated, fully responsive interface",
+    ],
+    tags: ["React", "Vite", "Framer Motion", "Formspree", "Vercel"],
+    images: [
+      { src: "/projects/vsec-college/home.webp", alt: "VSEC College homepage hero with enrolment statistics" },
+      { src: "/projects/vsec-college/programs.webp", alt: "Programme areas section with academy cards" },
+      { src: "/projects/vsec-college/courses.webp", alt: "Course catalogue page listing 32 available courses" },
+      { src: "/projects/vsec-college/quiz.webp", alt: "English level test introduction card" },
+      { src: "/projects/vsec-college/apply.webp", alt: "Online enrolment application page" },
+    ],
+    mobileImage: { src: "/projects/vsec-college/mobile.webp", alt: "VSEC College homepage on a phone" },
+    liveUrl: "https://www.vseccollege.com",
+    published: true,
   },
   {
-    id: "retail-sales-dashboard",
-    title: "Retail Sales Performance Dashboard",
-    description:
-      "Interactive Power BI dashboard tracking regional sales, inventory turnover, and profit margins in real time.",
-    longDescription:
-      "Built a multi-page Power BI dashboard connected to a SQL data warehouse, giving stakeholders drill-down visibility into regional sales trends and inventory health.",
-    category: "Data",
-    tags: ["Power BI", "SQL", "DAX"],
-    image: "https://picsum.photos/seed/retail-dashboard/800/600",
-    liveUrl: "#",
-    githubUrl: "#",
-    featured: true,
-  },
-  {
-    id: "customer-churn-analysis",
-    title: "Customer Churn Analysis",
-    description:
-      "Cleaned and analyzed a 50k-row customer dataset to identify churn drivers and build a retention scorecard.",
-    longDescription:
-      "Performed end-to-end data cleaning, exploratory analysis, and visualization in Excel and SQL to surface the top predictors of customer churn for a subscription business.",
-    category: "Data",
-    tags: ["Excel", "SQL", "Data Cleaning"],
-    image: "https://picsum.photos/seed/churn-analysis/800/600",
-    liveUrl: null,
-    githubUrl: "#",
-    featured: false,
-  },
-  {
-    id: "portfolio-site",
-    title: "Personal Portfolio Website",
-    description:
-      "This site — a responsive React + Tailwind portfolio with dark mode, animations, and a fully accessible UI.",
-    longDescription:
-      "Built with React 19, Vite, Tailwind CSS v4, and Framer Motion. Features a light/dark theme, scroll-spy navigation, and a modular, data-driven content structure.",
-    category: "Development",
-    tags: ["React", "Tailwind CSS", "Framer Motion", "Vite"],
-    image: "https://picsum.photos/seed/portfolio-site/800/600",
-    liveUrl: "#",
-    githubUrl: "#",
-    featured: true,
-  },
-  {
-    id: "task-manager-django",
-    title: "Django Task Management API",
-    description:
-      "A REST API for a team task manager with authentication, role-based permissions, and activity logging.",
-    longDescription:
-      "Designed and built a Django REST Framework API with JWT authentication, role-based access control, and a full test suite, deployed with CI/CD.",
-    category: "Development",
-    tags: ["Python", "Django", "REST API", "PostgreSQL"],
-    image: "https://picsum.photos/seed/django-api/800/600",
-    liveUrl: null,
-    githubUrl: "#",
-    featured: false,
+    // Hidden until the Play Store listing is public or screenshots are supplied.
+    id: "the-menorah-app",
+    title: "The Menorah App",
+    type: "Mobile App",
+    role: "Developer",
+    contribution: "",
+    features: [],
+    tags: [],
+    images: [],
+    mobileImage: null,
+    liveUrl: "https://play.google.com/store/apps/details?id=com.snr_roko.the_menorah",
+    published: false,
   },
 ];

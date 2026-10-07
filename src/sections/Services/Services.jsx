@@ -12,7 +12,7 @@ export function Services() {
       <SectionHeading
         eyebrow="Services"
         title="How I can help"
-        description="From first sketch to shipped product, here's where I add the most value."
+        description="Practical technology solutions that bring together AI, software development, data, research, and healthcare."
       />
 
       <StaggerContainer className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3" staggerDelay={0.1}>
@@ -30,7 +30,7 @@ export function Services() {
                   <ul className="mt-auto flex flex-col gap-1.5 pt-2 text-sm text-muted-foreground">
                     {service.highlights.map((highlight) => (
                       <li key={highlight} className="flex items-center gap-2">
-                        <span className="h-1 w-1 rounded-full bg-accent" aria-hidden="true" />
+                        <span className="h-1 w-1 shrink-0 rounded-full bg-accent" aria-hidden="true" />
                         {highlight}
                       </li>
                     ))}

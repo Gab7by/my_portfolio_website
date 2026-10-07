@@ -7,9 +7,7 @@ import { Skills } from "../sections/Skills/Skills";
 import { Services } from "../sections/Services/Services";
 import { Statistics } from "../sections/Statistics/Statistics";
 import { Projects } from "../sections/Projects/Projects";
-import { Experience } from "../sections/Experience/Experience";
 import { Education } from "../sections/Education/Education";
-import { Testimonials } from "../sections/Testimonials/Testimonials";
 import { Contact } from "../sections/Contact/Contact";
 
 export function HomePage() {
@@ -31,9 +29,7 @@ export function HomePage() {
         <Services />
         <Statistics />
         <Projects />
-        <Experience />
         <Education />
-        <Testimonials />
         <Contact />
       </main>
 

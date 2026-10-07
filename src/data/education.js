@@ -1,38 +1,28 @@
-export const education = [
+export const degree = {
+  title: "BSc. Medical Laboratory Science",
+  institution: "University of Cape Coast (UCC)",
+  honours: "First Class Honours",
+  description:
+    "My formal academic foundation in healthcare: laboratory diagnostics, quality-assured laboratory practice, and the science behind the results clinicians rely on. It's the grounding I bring to every healthcare technology and AI project.",
+};
+
+export const training = [
   {
-    id: "edu-bsc-cs",
-    type: "Degree",
-    title: "B.Sc. Computer Science",
-    institution: "University of Ghana",
-    startDate: "2020-09",
-    endDate: "2024-06",
-    description: "Focused on software engineering, databases, and human-computer interaction.",
+    id: "alx-software",
+    title: "Software Development (Frontend & Backend)",
+    institution: "ALX",
+    icon: "Code2",
+    description:
+      "Practical, project-based software engineering training covering both the frontend and the backend, from building user interfaces to server-side logic, APIs and databases.",
+    skills: ["Frontend Development", "Backend Development", "APIs", "Databases"],
   },
   {
-    id: "edu-cert-pbi",
-    type: "Certification",
-    title: "Microsoft Power BI Data Analyst Associate (PL-300)",
-    institution: "Microsoft",
-    startDate: "2023-08",
-    endDate: "2023-08",
-    description: null,
-  },
-  {
-    id: "edu-cert-react",
-    type: "Certification",
-    title: "Meta Front-End Developer Professional Certificate",
-    institution: "Coursera / Meta",
-    startDate: "2023-01",
-    endDate: "2023-05",
-    description: null,
-  },
-  {
-    id: "edu-cert-gd",
-    type: "Certification",
-    title: "Graphic Design Specialization",
-    institution: "California Institute of the Arts (Coursera)",
-    startDate: "2021-06",
-    endDate: "2021-11",
-    description: null,
+    id: "alx-data",
+    title: "Data Analytics",
+    institution: "ALX",
+    icon: "BarChart3",
+    description:
+      "Hands-on training in turning raw data into insight, from cleaning and querying data to analysing it and building clear visual reports.",
+    skills: ["Data Analysis", "Data Visualization", "SQL", "Excel", "Power BI"],
   },
 ];
