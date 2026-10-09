@@ -49,10 +49,10 @@ import {
   Bot,
   Lightbulb,
 } from "lucide-react";
-import { FaDribbble, FaGithub, FaInstagram, FaLinkedin, FaWhatsapp, FaXTwitter } from "react-icons/fa6";
+import { FaGithub, FaInstagram, FaLinkedin, FaTiktok, FaWhatsapp } from "react-icons/fa6";
 
 // lucide-react no longer ships brand/logo icons, so brand marks (GitHub, LinkedIn,
-// Twitter/X, Dribbble, Instagram, WhatsApp) are sourced from react-icons instead.
+// TikTok, Instagram, WhatsApp) are sourced from react-icons instead.
 export const iconMap = {
   Palette,
   BarChart3,
@@ -105,9 +105,8 @@ export const iconMap = {
   Lightbulb,
   Github: FaGithub,
   Linkedin: FaLinkedin,
-  Twitter: FaXTwitter,
+  Tiktok: FaTiktok,
   Instagram: FaInstagram,
-  Dribbble: FaDribbble,
   Whatsapp: FaWhatsapp,
 };
 
