@@ -86,7 +86,6 @@ export function Hero() {
               alt={`Portrait of ${personalInfo.fullName}`}
               size={280}
               className="border-4 border-card shadow-2xl"
-              imgClassName="scale-125"
             />
           </div>
         </motion.div>
